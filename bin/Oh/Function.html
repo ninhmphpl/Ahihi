@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sum(a,b,c) { // Tham số là biến được khai báo bên trong (), mục đích để nhận những biến được truyền vào Function khi được gọi;
+        let d = a + b + c;// biến sẽ ưu tiên sử dụng biến được khai báo bên trong nó bao gồm , biến trong function và biến tham số, Trong trường hợp không tìm được biến khai báo bên trong Function nó sẽ thoát ra khỏi block để tìm biến mà nó đang tìm;
+        return d // Return sẽ trả về giá trị sau khi biến được gọi, nếu không có return thì function mặc định trả về Undefine.
+    }
+    function display(a) {
+        console.log(a);
+    }
+    function sumArry(arr) {
+        let sum = 0;
+        for ( let i of arr){
+            sum += i;
+        }
+        return sum;
+    }
+    function ganGiaTri() {  // function thực thiện hành đồng động gán, không có tham số truyền vào
+        a = 1;
+        b = 2;
+        c = 1;
+    }
+    function denta(a,b,c) { // Function Thực hiện hành động tính denta cho phương trình bậc 2 yêu cầu 3 tham số truyền vào và trả về giá trị denta sau khi gọi Function
+        let denta = b*b - 4 *a*c;
+        return denta;
+    }
+    function result(denta) { // Function thực hiện tính nghiệm của phương trình bậc 2 yêu cầu truyền vào denta và trả về giá trị là 2 nghiệm x1 và x2
+        let x1 = (-b + Math.sqrt(denta))/2*a
+        let x2 = (-b - Math.sqrt(denta))/2*a
+        return [x1,x2];
+    }
+
+
+
+    let a;
+    let b;
+    let c;
+    ganGiaTri(); // function bắt buộc phải có dấu () để thể hiện đó là function
+    let d = result(denta(a,b,c))
+    display(d)
+
+
+    display(a)
+    display(b)
+    display(c)
+    
+    
+
+
+    
+    
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
